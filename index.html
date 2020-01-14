@@ -38,9 +38,9 @@
         </div>
         <script src="./scrapAward-dev.js"></script>
         <script>
-		var prize = ["1","2","3","4"];
-	var item  = [2,2,2,2];
-		var t = 8;
+		var prize = ["1","2","3","4","Google"];
+	var item  = [2,2,2,2,1];
+		var t = 9;
 		var i = (Math.random()) * prize.length | 0;
             window.onload = function() {
 		    
@@ -84,6 +84,10 @@
                 i = (Math.random() * prize.length) | 0;
                 console.log(item);
             }
+	    }else{
+		    alert("Chances used up. Reloading...")
+	    	location.reload();
+	    
 	    }
             item[i]--;	
 			iden = i;
