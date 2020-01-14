@@ -52,6 +52,7 @@
                 console.log(item);
             }}
             item[i]--;
+		    iden = i;
 		t--;
                 let scraAward = new ScrapAward({
                     height: 570,
@@ -73,7 +74,7 @@
 			    stamp.disabled=true;
                     scraAward.restart({
                     height: 570,
-                    backgroundImageUrl: prize[i],
+                    backgroundImageUrl: prize[iden],
                     coverImage: {
                         url: './p1.jpg',
                         // color: 'grey',
@@ -94,6 +95,7 @@
             }
 	    }
             item[i]--;	
+			iden = i;
 		});
             };
         </script>
