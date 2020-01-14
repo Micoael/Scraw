@@ -41,6 +41,7 @@
         </div>
         <script src="./scrapAward-dev.js"></script>
         <script>
+		var hi = document.getElementById("progressbar");
 		var prize = ["Sample 1","Sample 2","Sample 3","Sample 4","Sample 5"];
 	var item  = [2,2,2,2,1];
 		var t = 9;
@@ -71,6 +72,7 @@
                         height: 570,
                     },
                     callback: () => {
+			    hi.hidden = true;
                          console.log("Current items:" + item +"  ,and "+t+"items left.");
 			alert("Current items:" + item +"  ,and there are "+t+" items left.");
 			    var stamp = document.getElementById("try_again");
@@ -78,6 +80,7 @@
                     },
                 });
                 document.getElementById('try_again').addEventListener('click', function(e) {
+			hi.hidden = false;
 			t--;
 			if(t>-1){
 			console.log(t);
@@ -102,6 +105,7 @@
                         height: 570,
                     },
                     callback: () => {
+			    hi.hidden = true;
 			    console.log(t);
                         alert("Current items:" + item +"  ,and there are "+t+" items left.");
 			    var stamp = document.getElementById("try_again");
