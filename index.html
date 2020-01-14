@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>实现一个“刮刮乐”游戏</title>
+        <style type="text/css">
+            .demo {
+                width: 320px;
+                margin: 10px auto 20px auto;
+                min-height: 300px;
+            }
+            .msg {
+                text-align: center;
+                height: 32px;
+                line-height: 32px;
+                font-weight: bold;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div class="msg">
+                刮刮下面图片看看什么效果哈哈哈，<a href="javascript:void(0)" id="try_again">再来一次</a>
+            </div>
+            <div class="demo">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+        <script src="./scrapAward-dev.js"></script>
+        <script>
+            window.onload = function() {
+	var prize = ["A","B","C","D"];
+	var item  = [0,0,0,0];
+                let scraAward = new ScrapAward({
+                    height: 570,
+                    backgroundImageUrl: './super.jpg',
+                    coverImage: {
+                        url: './p1.jpg',
+                        // color: 'grey',
+                        width: 428,
+                        height: 570,
+                    },
+                    callback: () => {
+                        alert('刮奖结束');
+                    },
+                });
+                document.getElementById('try_again').addEventListener('click', function(e) {
+                    scraAward.restart();
+                });
+            };
+        </script>
+    </body>
+</html>
