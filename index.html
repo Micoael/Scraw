@@ -38,7 +38,7 @@
         </div>
         <script src="./scrapAward-dev.js"></script>
         <script>
-		var prize = ["https://cdn.luogu.com.cn/upload/pic/36751.png","https://cdn.luogu.com.cn/upload/image_hosting/enuh4qry.png","https://cdn.luogu.com.cn/upload/image_hosting/hm03tpz7.png","https://cdn.luogu.com.cn/upload/image_hosting/lf9aj7gy.png"];
+		var prize = ["1","2","3","4"];
 	var item  = [2,2,2,2];
 		var t = 8;
 		var i = (Math.random()) * prize.length | 0;
@@ -60,7 +60,7 @@
 		    console.log(i);
                 let scraAward = new ScrapAward({
                     height: 570,
-                    backgroundImageUrl: prize[i],
+                    backgroundImageUrl: 'http://via.placeholder.com/350x150?text='+prize[i],
                     coverImage: {
                         url: './p1.jpg',
                         // color: 'grey',
