@@ -33,15 +33,18 @@
         <script src="./scrapAward-dev.js"></script>
         <script>
             window.onload = function() {
+		    
 	var prize = ["A","B","C","D"];
 	var item  = [2,0,0,0];
+		    var t = 2;
 	var i = (Math.random()) * prize.length | 0;
-            while (item[i] < 1) {
+            if(t>=0){
+	    while (item[i] < 1) {
                 i = (Math.random() * prize.length) | 0;
                 console.log(item);
-            }
+            }}
             item[i]--;
-	
+		t--;
                 let scraAward = new ScrapAward({
                     height: 570,
                     backgroundImageUrl: prize[i],
@@ -58,10 +61,12 @@
                 document.getElementById('try_again').addEventListener('click', function(e) {
                     scraAward.restart();
 		var i = (Math.random()) * prize.length | 0;
-            while (item[i] < 1) {
+            if(t>0){
+	    while (item[i] < 1) {
                 i = (Math.random() * prize.length) | 0;
                 console.log(item);
             }
+	    }
             item[i]--;	
 		});
             };
