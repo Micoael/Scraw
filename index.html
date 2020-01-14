@@ -34,10 +34,17 @@
         <script>
             window.onload = function() {
 	var prize = ["A","B","C","D"];
-	var item  = [0,0,0,0];
+	var item  = [2,0,0,0];
+	var i = (Math.random()) * prize.length | 0;
+            while (item[i] < 1) {
+                i = (Math.random() * this.options.awards.length) | 0;
+                console.log(this.options.used);
+            }
+            this.options.used[i]--;
+	
                 let scraAward = new ScrapAward({
                     height: 570,
-                    backgroundImageUrl: './super.jpg',
+                    backgroundImageUrl: prize[i],
                     coverImage: {
                         url: './p1.jpg',
                         // color: 'grey',
