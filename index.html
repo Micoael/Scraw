@@ -68,7 +68,7 @@
                         height: 570,
                     },
                     callback: () => {
-                         alert(item);
+                         console.log("Current items:" + item +"  ,and "+t+"items left.");
 			    var stamp = document.getElementById("try_again");
 			    stamp.disabled=false;
                     },
@@ -83,7 +83,7 @@
             
 	    while (item[i] < 1) {
                 i = (Math.random() * prize.length) | 0;
-                console.log(item);
+                console.log("Current items:" + item +"  ,and "+t+"items left.");
             }
 	    
             item[i]--;	
