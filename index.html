@@ -35,11 +35,12 @@
 		var prize = ["https://cdn.luogu.com.cn/upload/pic/36751.png","https://cdn.luogu.com.cn/upload/image_hosting/enuh4qry.png","https://cdn.luogu.com.cn/upload/image_hosting/hm03tpz7.png","https://cdn.luogu.com.cn/upload/image_hosting/lf9aj7gy.png"];
 	var item  = [2,2,2,2];
 		var t = 8;
+		var i = (Math.random()) * prize.length | 0;
             window.onload = function() {
 		    
 	
 		    
-	var i = (Math.random()) * prize.length | 0;
+	
             if(t>=0){
 	    while (item[i] < 1) {
                 i = (Math.random() * prize.length) | 0;
@@ -74,7 +75,7 @@
                         alert('刮奖结束');
                     },
                 });
-		var i = (Math.random()) * prize.length | 0;
+		i = (Math.random()) * prize.length | 0;
             if(t>0){
 	    while (item[i] < 1) {
                 i = (Math.random() * prize.length) | 0;
