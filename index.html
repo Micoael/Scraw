@@ -74,6 +74,8 @@
                     },
                 });
                 document.getElementById('try_again').addEventListener('click', function(e) {
+			t--;
+			console.log(t);
 			var stamp = document.getElementById("try_again");
 			    stamp.disabled=true;
 			i = (Math.random()) * prize.length | 0;
@@ -95,6 +97,7 @@
                         height: 570,
                     },
                     callback: () => {
+			    console.log(t);
                         alert(item);
 			    var stamp = document.getElementById("try_again");
 			    stamp.disabled=false;
