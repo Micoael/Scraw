@@ -51,9 +51,12 @@
                 i = (Math.random() * prize.length) | 0;
                 console.log(item);
             }}
-            item[i]--;
 		    iden = i;
+		    console.log(i);
+            item[i]--;
+		    
 		t--;
+		    console.log(i);
                 let scraAward = new ScrapAward({
                     height: 570,
                     backgroundImageUrl: prize[i],
@@ -72,6 +75,15 @@
                 document.getElementById('try_again').addEventListener('click', function(e) {
 			var stamp = document.getElementById("try_again");
 			    stamp.disabled=true;
+			i = (Math.random()) * prize.length | 0;
+            if(t>1){
+	    while (item[i] < 1) {
+                i = (Math.random() * prize.length) | 0;
+                console.log(item);
+            }
+	    }
+            item[i]--;	
+			iden = i;
                     scraAward.restart({
                     height: 570,
                     backgroundImageUrl: prize[iden],
@@ -87,15 +99,7 @@
 			    stamp.disabled=false;
                     },
                 });
-		i = (Math.random()) * prize.length | 0;
-            if(t>1){
-	    while (item[i] < 1) {
-                i = (Math.random() * prize.length) | 0;
-                console.log(item);
-            }
-	    }
-            item[i]--;	
-			iden = i;
+		
 		});
             };
         </script>
