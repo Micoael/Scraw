@@ -75,20 +75,17 @@
                 });
                 document.getElementById('try_again').addEventListener('click', function(e) {
 			t--;
+			if(t>=-1){
 			console.log(t);
 			var stamp = document.getElementById("try_again");
 			    stamp.disabled=true;
 			i = (Math.random()) * prize.length | 0;
-            if(t>=-1){
+            
 	    while (item[i] < 1) {
                 i = (Math.random() * prize.length) | 0;
                 console.log(item);
             }
-	    }else{
-		    alert("Chances used up. Reloading...")
-	    	location.reload();
 	    
-	    }
             item[i]--;	
 			iden = i;
                     scraAward.restart({
@@ -107,7 +104,11 @@
 			    stamp.disabled=false;
                     },
                 });
-		
+		}else{
+		    alert("Chances used up. Reloading...")
+	    	location.reload();
+	    
+	    }
 		});
             };
         </script>
