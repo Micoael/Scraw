@@ -59,7 +59,19 @@
                     },
                 });
                 document.getElementById('try_again').addEventListener('click', function(e) {
-                    scraAward.restart();
+                    scraAward.restart({
+                    height: 570,
+                    backgroundImageUrl: prize[i],
+                    coverImage: {
+                        url: './p1.jpg',
+                        // color: 'grey',
+                        width: 428,
+                        height: 570,
+                    },
+                    callback: () => {
+                        alert('刮奖结束');
+                    },
+                });
 		var i = (Math.random()) * prize.length | 0;
             if(t>0){
 	    while (item[i] < 1) {
