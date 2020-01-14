@@ -63,7 +63,9 @@
                         height: 570,
                     },
                     callback: () => {
-                        alert('刮奖结束');
+                         alert(item);
+			    var stamp = document.getElementById("try_again");
+			    stamp.disabled=false;
                     },
                 });
                 document.getElementById('try_again').addEventListener('click', function(e) {
