@@ -137,7 +137,7 @@ class ScrapAward {
                     transPixels.push(pixels[i + 3]);
                 }
             }
-            return ((transPixels.length / (pixels.length / 4)) * 100).toFixed(2) + '%';
+            return ((transPixels.length / (pixels.length / 4)) * 200).toFixed(2) + '%';
         }
         // 设置阈值，去除灰色涂层
         function handleFilledPercentage(percentage) {
