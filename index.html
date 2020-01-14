@@ -67,6 +67,8 @@
                     },
                 });
                 document.getElementById('try_again').addEventListener('click', function(e) {
+			var stamp = document.getElementById("try_again");
+			    stamp.disabled=true;
                     scraAward.restart({
                     height: 570,
                     backgroundImageUrl: prize[i],
