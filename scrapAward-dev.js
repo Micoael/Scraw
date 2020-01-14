@@ -142,7 +142,7 @@ class ScrapAward {
         // 设置阈值，去除灰色涂层
         function handleFilledPercentage(percentage) {
             percentage = percentage || 0;
-            if (parseInt(percentage) > 50) {
+            if (parseInt(percentage) > 2) {
                 // 当像素点的个数超过  50% 时，清空画布，显示底图
                 ctx.clearRect(0, 0, w, h);
                 hasDone = true;
