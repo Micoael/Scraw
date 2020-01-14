@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta charset="UTF-8" />
-	    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
-	    <link href="//cdn.muicss.com/mui-0.10.0/css/mui.min.css" rel="stylesheet" type="text/css" />
-	    <script src="//cdn.muicss.com/mui-0.10.0/js/mui.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+        <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+        <link href="//cdn.muicss.com/mui-0.10.0/css/mui.min.css" rel="stylesheet" type="text/css"/>
+        <script src="//cdn.muicss.com/mui-0.10.0/js/mui.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
         <title>Prize</title>
         <style type="text/css">
             .demo {
@@ -16,6 +16,7 @@
                 margin: 10px auto 20px auto;
                 min-height: 300px;
             }
+
             .msg {
                 text-align: center;
                 height: 32px;
@@ -26,111 +27,115 @@
         </style>
     </head>
     <body>
-	   
-        <div id="main" margin = "20">
-		 <div class="mdui-appbar">
-  <div class="mdui-toolbar mdui-color-theme">
-    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-    <a href="javascript:;" class="mdui-typo-headline">Scraw to win</a>
-    <a href="javascript:;" class="mdui-typo-title">by mp</a>
-    <div class="mdui-toolbar-spacer"></div>
-    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
-  </div>
-</div>
-		<div class="mui-container">
-      <div class="mui-panel">
-        <h1>Obtaining awards from Final Exam... </h1>
-        <button class="mui-btn mui-btn--primary mui-btn--raised" id = "try_again" disabled="true"> ▶ 继续</button>
-	      <div class="mdui-spinner mdui-spinner-colorful" id="progressbar"></div>
-	      <h5>Made with MUI and Material Design. Prototype by superzxk, and made with ♥ by Micoael_Primo</h5>
-      </div>
-    </div>
+        <div id="main" margin="20">
+            <div class="mdui-appbar">
+                <div class="mdui-toolbar mdui-color-theme">
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                        <i class="mdui-icon material-icons">menu</i>
+                    </a>
+                    <a href="javascript:;" class="mdui-typo-headline">Scraw to win</a>
+                    <a href="javascript:;" class="mdui-typo-title">by mp</a>
+                    <div class="mdui-toolbar-spacer"></div>
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                        <i class="mdui-icon material-icons">search</i>
+                    </a>
+                </div>
+            </div>
+            <div class="mui-container">
+                <div class="mui-panel">
+                    <h1>Obtaining awards from Final Exam... </h1>
+                    <button class="mui-btn mui-btn--primary mui-btn--raised" id="try_again" disabled="true">▶ 继续</button>
+                    <div class="mdui-spinner mdui-spinner-colorful" id="progressbar"></div>
+                    <h5>Made with MUI and Material Design. Prototype by superzxk, and made with ♥ by Micoael_Primo</h5>
+                </div>
+            </div>
             <div class="demo">
-		    <div id="main">
-                <canvas id="canvas"></canvas>
-			    </div>
+                <div id="main">
+                    <canvas id="canvas"></canvas>
+                </div>
             </div>
         </div>
         <script src="./scrapAward-dev.js"></script>
         <script>
-		var hi = document.getElementById("progressbar");
-		var prize = ["Sample 1","Sample 2","Sample 3","Sample 4","Sample 5"];
-	var item  = [2,2,2,2,1];
-		var t = 9;
-		var i = (Math.random()) * prize.length | 0;
+            var hi = document.getElementById("progressbar");
+            var prize = ["Sample 1", "Sample 2", "Sample 3", "Sample 4", "Sample 5"];
+            var item = [2, 2, 2, 2, 1];
+            var t = 9;
+            var i = (Math.random()) * prize.length | 0;
             window.onload = function() {
-		    
-	
-		    
-	
-            if(t>=-1){
-	    while (item[i] < 1) {
-                i = (Math.random() * prize.length) | 0;
-                console.log(item);
-            }}
-		    iden = i;
-		    console.log(i);
-            item[i]--;
-		    
-		t--;
-		    console.log(i);
+
+                if (t >= -1) {
+                    while (item[i] < 1) {
+                        i = (Math.random() * prize.length) | 0;
+                        console.log(item);
+                    }
+                }
+                iden = i;
+                console.log(i);
+                item[i]--;
+
+                t--;
+                console.log(i);
                 let scraAward = new ScrapAward({
                     height: 570,
-                    backgroundImageUrl: 'http://via.placeholder.com/428x570?text='+prize[i],
+                    backgroundImageUrl: 'http://via.placeholder.com/428x570?text=' + prize[i],
                     coverImage: {
                         url: './p3.png',
                         // color: 'grey',
                         width: 428,
                         height: 570,
                     },
-                    callback: () => {
-			    hi.hidden = true;
-                         console.log("Current items:" + item +"  ,and "+t+"items left.");
-			alert("Current items:" + item +"  ,and there are "+t+" items left.");
-			    var stamp = document.getElementById("try_again");
-			    stamp.disabled=false;
-                    },
+                    callback: ()=>{
+                        hi.hidden = true;
+                        console.log("Current items:" + item + "  ,and " + t + "items left.");
+                        alert("Current items:" + item + "  ,and there are " + t + " items left.");
+                        var stamp = document.getElementById("try_again");
+                        stamp.disabled = false;
+                    }
+                    ,
                 });
                 document.getElementById('try_again').addEventListener('click', function(e) {
-			hi.hidden = false;
-			t--;
-			if(t>-1){
-			console.log(t);
-			var stamp = document.getElementById("try_again");
-			    stamp.disabled=true;
-			i = (Math.random()) * prize.length | 0;
-            
-	    while (item[i] < 1) {
-                i = (Math.random() * prize.length) | 0;
-                console.log("Current items:" + item +"  ,and "+t+"items left.");
-            }
-	    
-            item[i]--;	
-			iden = i;
-                    scraAward.restart({
-                    height: 570,
-                    backgroundImageUrl: 'http://via.placeholder.com/428x570?text='+prize[i],
-                    coverImage: {
-                        url: './p3.png',
-                        // color: 'grey',
-                        width: 428,
-                        height: 570,
-                    },
-                    callback: () => {
-			    hi.hidden = true;
-			    console.log(t);
-                        alert("Current items:" + item +"  ,and there are "+t+" items left.");
-			    var stamp = document.getElementById("try_again");
-			    stamp.disabled=false;
-                    },
+                    hi.hidden = false;
+                    t--;
+                    if (t > -1) {
+                        console.log(t);
+                        var stamp = document.getElementById("try_again");
+                        stamp.disabled = true;
+                        i = (Math.random()) * prize.length | 0;
+
+                        while (item[i] < 1) {
+                            i = (Math.random() * prize.length) | 0;
+                            console.log("Current items:" + item + "  ,and " + t + "items left.");
+                        }
+
+                        item[i]--;
+                        iden = i;
+                        scraAward.restart({
+                            height: 570,
+                            backgroundImageUrl: 'http://via.placeholder.com/428x570?text=' + prize[i],
+                            coverImage: {
+                                url: './p3.png',
+                                // color: 'grey',
+                                width: 428,
+                                height: 570,
+                            },
+                            callback: ()=>{
+                                hi.hidden = true;
+                                console.log(t);
+                                alert("Current items:" + item + "  ,and there are " + t + " items left.");
+                                var stamp = document.getElementById("try_again");
+                                stamp.disabled = false;
+                            }
+                            ,
+                        });
+                    } else {
+                        alert("Chances used up. Reloading...")
+                        location.reload();
+
+                    }
                 });
-		}else{
-		    alert("Chances used up. Reloading...")
-	    	location.reload();
-	    	
-	    }
-		});
-            };
+            }
+            ;
         </script>
     </body>
 </html>
