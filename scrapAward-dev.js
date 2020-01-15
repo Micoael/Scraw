@@ -137,6 +137,8 @@ class ScrapAward {
                     transPixels.push(pixels[i + 3]);
                 }
             }
+            var e  = document.getElementById("googleio");
+            e.style = "width: " + ((transPixels.length / (pixels.length / 4)) * 100).toFixed(2) + '%' + ";";
             return ((transPixels.length / (pixels.length / 4)) * 100).toFixed(2) + '%';
         }
         // 设置阈值，去除灰色涂层
