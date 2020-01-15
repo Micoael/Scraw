@@ -75,7 +75,7 @@
                     <canvas id="canvas"></canvas>
                     <button class="mui-btn mui-btn--primary mui-btn--raised" id="try_again" disabled="true" hidden="true">Start ▶ </button>
                     <div class="mdui-progress" id="progressbar"><div class="mdui-progress">
-  <div class="mdui-progress-determinate" style="width: 30%;" id = "googleio"></div>
+  <div class="mdui-progress-determinate" style="width: 0%;" id = "googleio"></div>
 </div></div>
                     <h5>Made with MUI and Material Design. Prototype by superzxk, and made with ♥ by Micoael_Primo</h5>
                     <h5>↓ Scroll down the page to read the About page after you had enough fun ↓ --MicoaelPrimo 2020.1.14 21:19</h5>
@@ -112,7 +112,7 @@
         <script src="./scrapAward-dev.js"></script>
         <script>
             var hi = document.getElementById("progressbar");
-            var prize = ["Notebook", "Mask", "Gloves", "Signature refill (Box of pen)", "towel","Hand cream","Chinese knot","Sock","Soap"];
+            var prize = ["Notebook", "Mask", "Gloves", "Pen", "towel","Hand cream","Chinese knot","Sock","Soap"];
             var item = [15,10,10,10,10,10,15,10,10];
             var t = 100;
             var i = (Math.random()) * prize.length | 0;
