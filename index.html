@@ -73,7 +73,7 @@
                     <h1>Scratch the following picture... </h1>
                     
                     <canvas id="canvas"></canvas>
-                    <button class="mui-btn mui-btn--primary mui-btn--raised" id="try_again" disabled="true">Continue ▶ </button>
+                    <button class="mui-btn mui-btn--primary mui-btn--raised" id="try_again" disabled="true" hidden="true">Start ▶ </button>
                     <div class="mdui-progress" id="progressbar"><div class="mdui-progress">
   <div class="mdui-progress-indeterminate"></div>
 </div></div>
@@ -181,7 +181,7 @@
                                 var stamp = document.getElementById("try_again");
                                 stamp.disabled = false;
                                 stamp.hidden = false;
-                                stamp.textContent = "There are t items left. Click to continue.";
+                                stamp.textContent = "There are "+ t +" items left. Click to continue.";
                             }
                             ,
                         });
