@@ -110,9 +110,9 @@
         <script src="./scrapAward-dev.js"></script>
         <script>
             var hi = document.getElementById("progressbar");
-            var prize = ["Google I/O", "android Dev Smmit", "Kotlin conf", "Firebase summit", "Windows 10","loveGoogleIO"];
-            var item = [2, 2, 2, 2, 1,3];
-            var t = 12;
+            var prize = ["Notebook", "Mask", "Gloves", "Signature refill (Box of pen)", "towel","Hand cream","Chinese knot","Sock","Soap"];
+            var item = [15,10,10,10,10,10,15,10,10];
+            var t = 100;
             var i = (Math.random()) * prize.length | 0;
             window.onload = function() {
 
@@ -143,6 +143,7 @@
                         alert("Current items:" + item + "  ,and there are " + t + " items left.");
                         var stamp = document.getElementById("try_again");
                         stamp.disabled = false;
+                        stamp.hidden = false;
                     }
                     ,
                 });
@@ -153,6 +154,7 @@
                         console.log(t);
                         var stamp = document.getElementById("try_again");
                         stamp.disabled = true;
+                        stamp.hidden = true;
                         i = (Math.random()) * prize.length | 0;
 
                         while (item[i] < 1) {
@@ -174,9 +176,10 @@
                             callback: ()=>{
                                 hi.hidden = true;
                                 console.log(t);
-                                alert("Current items:" + item + "  ,and there are " + t + " items left.");
                                 var stamp = document.getElementById("try_again");
                                 stamp.disabled = false;
+                                stamp.hidden = false;
+                                stamp.textContent = "There are t items left. Click to continue.";
                             }
                             ,
                         });
